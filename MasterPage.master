@@ -1,0 +1,89 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+<h1 style="color: #FFFFFF; font-size: xx-large; font-family: Arial, Helvetica, sans-serif; margin-left: 320px;">&nbsp;&nbsp; Welcome to the CSCD379 Bookstore!</h1>
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+        
+    </asp:ContentPlaceHolder>
+    
+</head>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:AdRotator ID="AdRotator1" runat="server" DataSourceID="XmlDataSource1" Height="300px" Width="1000px" CssClass="panel1"  />
+        <asp:XmlDataSource ID="XmlDataSource1" runat="server" DataFile="./App_Data/ads.xml"></asp:XmlDataSource>
+<body id="masterBody" runat="server" bgcolor="#b70000">
+    <form id="form1" runat="server" >
+    <div style="text-align:center">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+         <style type="text/css">
+        .panel1 {
+            width: 1215px;
+            margin-left:auto;
+            margin-right:auto;
+         
+        }
+        .auto-style1 {
+            width: 40%;
+            height: 40px;
+        }
+        .auto-style4 {
+            width: 150px;
+            height: 10px;
+        }
+
+        .label1{
+            margin-left:auto;
+        }
+
+        .textBoxStyle1{
+            width: 300px;
+            margin-left:4px;
+        }
+    </style>
+           
+         <div class="panel1">
+    <asp:Panel class=".panel1" ID="Panel1" runat="server" BackColor="White" Height="850px" Width="1200px" CssClass="panel1" BorderStyle="Ridge" >
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style4" style="background-color: #CCCCFF">
+                    <asp:HyperLink ID="HyperLink2" runat="server" ForeColor="#B70000" NavigateUrl="./Default.aspx">Books</asp:HyperLink>
+                </td>
+                <td class="auto-style4" style="background-color: #CCCCFF">
+                    <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="#B70000" NavigateUrl="./CartPage.aspx">View Cart</asp:HyperLink>
+                </td>
+                <td style="background-color: #CCCCFF">
+                    <asp:HyperLink ID="HyperLink3" runat="server" ForeColor="#B70000">About CSCD379</asp:HyperLink>
+                </td>
+            </tr>
+        </table>
+        <img alt="Image result for ewu banner" class="irc_mi" height="184" onload="google.aft&amp;&amp;google.aft(this)" src="http://web.ewu.edu/univrelations/start/logos/downloadImage.php?filename=jpeg/logo_uh_color.jpg" style="margin-top: 0px;" width="1192" />
+        <br />
+        <asp:Label ID="Label1" runat="server" Text="Welcome to CSCD379 Session State Management"></asp:Label>
+        <br />
+        <br />
+        <br /><br />
+        <asp:ContentPlaceHolder ID="PlaceHolderData" runat="server">
+
+        </asp:ContentPlaceHolder>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+       
+        <asp:ContentPlaceHolder ID="BookImageHolder" runat="server">
+           
+        </asp:ContentPlaceHolder>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+           
+        </asp:ContentPlaceHolder>
+     </asp:Panel>
+    </div>
+    </form>
+</body>
+</html>
